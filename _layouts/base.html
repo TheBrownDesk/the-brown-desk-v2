@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+  <head>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        
+        <!--Sublogo-->
+        <a href="/" class="logo">
+          <img src="/assets/images/Sublogo.png" alt="The Brown Desk">
+        </a>
+
+        <!-- Navigation Menu -->
+        <nav class="menu">
+          <a href="/">Home</a>
+          <a href="/shop.html">Shop</a>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+
+            <!-- Icons -->
+        <div class="header-icons">
+          <a href="/search.html" class="icon"><img src="/assets/images/searchbar.png" alt="Search"></a>
+          <a href="/account.html" class="icon"><img src="/assets/images/account.png" alt="Account"></a>
+          <a href="/cart.html" class="icon"><img src="/assets/images/cart.png" alt="Cart"></a>
+        </div>
+      </div>
+    </header>
+    {% raw %}{{ content }}{% endraw %}
+    
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+  </body>
+
+</html>
